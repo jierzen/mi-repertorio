@@ -30,20 +30,20 @@ res.send("Bienvenido a Desafio 2 - Mi Repertorio")
 
 //Devuelve un JSON con las canciones registradas en el repertorio
 app.get("/canciones", (req, res) => {
-    const productos = JSON.parse(fs.readFileSync("repertorio.json"))
-    res.json(productos)
+    const canciones = JSON.parse(fs.readFileSync("repertorio.json"))
+    res.json(canciones)
     })
 
 //Recibe los datos correspondientes a una canción y la agrega al repertorio.
 app.post("/canciones", (req, res) => {
-	// 1 Almaceno producto proveniente de payload
-	const producto = req.body
-	// 2 Obtengo los productos existentes
-	const productos = JSON.parse(fs.readFileSync("repertorio.json"))
-	// 3 Agrego el producto al JSON
-	productos.push(producto)
-	// 4 Escribo el archivo JSON con el nuevo producto
-	fs.writeFileSync("repertorio.json", JSON.stringify(productos))
+	// 1 Almaceno cancion proveniente de payload
+	const cancion = req.body
+	// 2 Obtengo las canciones existentes
+	const canciones = JSON.parse(fs.readFileSync("repertorio.json"))
+	// 3 Agrego la cancion nueva al JSON
+	canciones.push(cancion)
+	// 4 Escribo el archivo JSON con la cancion nueva
+	fs.writeFileSync("repertorio.json", JSON.stringify(canciones))
 	// 5 Envio mensaje de exito al cliente
 	res.send("Cancion agregada con éxito!")
 })
@@ -52,14 +52,14 @@ app.post("/canciones", (req, res) => {
 app.delete("/canciones/:id", (req, res) => {
 	// Capturo el id del payload
 	const { id } = req.params
-	// Obtengo la lista de productos del archivo json
-	const productos = JSON.parse(fs.readFileSync("repertorio.json"))
-	// Filtro el indice del producto basado en el id del payload
-	const index = productos.findIndex(p => p.id == id)
-	// Elimino el producto
-	productos.splice(index, 1)
+	// Obtengo la lista de canciones del archivo json
+	const canciones = JSON.parse(fs.readFileSync("repertorio.json"))
+	// Filtro el indice de la cancion basado en el id del payload
+	const index = canciones.findIndex(p => p.id == id)
+	// Elimino la cancion
+	canciones.splice(index, 1)
 	// Sobreescribo el json
-	fs.writeFileSync("repertorio.json", JSON.stringify(productos))
+	fs.writeFileSync("repertorio.json", JSON.stringify(canciones))
 	  // Envio mensaje al cliente
 	res.send("Cancion eliminada con éxito")
 })
@@ -69,15 +69,15 @@ app.put("/canciones/:id", (req, res) => {
 	// Se recibe el id desde el payload
 	const { id } = req.params
 	// Se obtiene el body del payload
-	const producto = req.body
-	// Se listan los items del json
-	const productos = JSON.parse(fs.readFileSync("repertorio.json"))
-	// Se filtra el item del json basado en el id
-	const index = productos.findIndex(p => p.id == id)
-	// Se reemplaza el item por el nuevo item del payload
-	productos[index] = producto
+	const cancion = req.body
+	// Se listan las canciones del json
+	const canciones = JSON.parse(fs.readFileSync("repertorio.json"))
+	// Se filtra la cancion del json basado en el id
+	const index = canciones.findIndex(p => p.id == id)
+	// Se reemplaza la cancion por la nueva cancion del payload
+	canciones[index] = cancion
 	// Se sobreescribe el archivo json
-	fs.writeFileSync("repertorio.json", JSON.stringify(productos))
+	fs.writeFileSync("repertorio.json", JSON.stringify(canciones))
 	// Mensaje al usuario
 	res.send("Cancion modificada con éxito")
   })

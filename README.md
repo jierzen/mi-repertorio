@@ -19,15 +19,15 @@ local (3 Puntos) ✅
 
 ### Evidencias de Thunder Client 📷
 #### GET
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/P2.png)
+![p2](https://github.com/jierzen/mi-repertorio/blob/main/get.png)
 
 #### POST
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/P2.png)
+![p2](https://github.com/jierzen/mi-repertorio/blob/main/post.png)
 
 #### PUT
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/P2.png)
+![p2](https://github.com/jierzen/mi-repertorio/blob/main/put.png)
 
 #### DELETE
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/P2.png)
+![p2](https://github.com/jierzen/mi-repertorio/blob/main/delete.png)
 
 # Autor: Jorge Espinoza R 🧑🏻

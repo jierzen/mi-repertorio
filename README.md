@@ -18,16 +18,20 @@ local (3 Puntos) ✅
 5. Manipular el payload de una consulta HTTP al servidor (2 Puntos) ✅ 
 
 ### Evidencias de Thunder Client 📷
+
+#### Pagina Principal
+![html](https://github.com/jierzen/mi-repertorio/blob/main/indexHtml.png)
+
 #### GET
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/get.png)
+![get](https://github.com/jierzen/mi-repertorio/blob/main/get.png)
 
 #### POST
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/post.png)
+![post](https://github.com/jierzen/mi-repertorio/blob/main/post.png)
 
 #### PUT
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/put.png)
+![put](https://github.com/jierzen/mi-repertorio/blob/main/put.png)
 
 #### DELETE
-![p2](https://github.com/jierzen/mi-repertorio/blob/main/delete.png)
+![delete](https://github.com/jierzen/mi-repertorio/blob/main/delete.png)
 
 # Autor: Jorge Espinoza R 🧑🏻
